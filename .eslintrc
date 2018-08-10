@@ -1,0 +1,72 @@
+{
+  "root": true,
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "commonjs": true,
+    "browser": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "standard",
+    "prettier",
+    "prettier/react",
+    "prettier/standard"
+  ],
+  "plugins": ["react", "react-native", "babel", "promise"],
+  "globals": {
+    "__DEV__": true
+  },
+  "rules": {
+    "arrow-parens": 0,
+    "generator-star-spacing": 0,
+    "semi": [1, "never"],
+    "no-eval": ["error", {
+      "allowIndirect": true
+    }],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": ["off", "windows"],
+    "quotes": ["error", "single"],
+    "no-useless-constructor": 1,
+    "prefer-promise-reject-errors": 1,
+    "comma-dangle": [2, "never"],
+    "no-return-assign": 1,
+    "no-multi-spaces": 1,
+    "no-trailing-spaces": 0,
+    "camelcase": 0,
+    "react/display-name": 0,
+    "react/jsx-indent": [0],
+    "react/jsx-indent-props": [2, 2],
+    "react/prop-types": [1],
+    "react/jsx-boolean-value": 0,
+    "react/no-children-prop": [0],
+    "react/no-string-refs": [0],
+    "react/no-deprecated": "off",
+    "react/jsx-no-bind": 0,
+    "jsx-quotes": [0],
+    "no-mixed-operators": [0],
+    "standard/no-callback-literal": [0],
+    "no-extra-boolean-cast": [0],
+    "no-unused-vars": [2],
+    "no-useless-escape": 0,
+    "no-case-declarations": 0,
+    "no-console": 0,
+    "handle-callback-err": [0],
+    "object-curly-spacing": [2, "always"],
+    "no-fallthrough": 0,
+    "require-yield": 0
+  }
+}
