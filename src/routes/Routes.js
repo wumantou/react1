@@ -12,13 +12,14 @@ import Login from './auth/index'
 import Frame from './Layout/Frame'
 import LikeButton from './LikeButton/index'
 import Page from './Page/index'
+import CommentArea from './CommentArea/index'
 import AsyncComponent from '../components/AsyncComponent'
 
 const Movie = AsyncComponent(() => import('./Movie'/* webpackChunkName: 'movie' */))
 export default () => {
   return (
     <Switch>
-      <Redirect exact from="/" to="/page" />
+      <Redirect exact from="/" to="/comment" />
 
       {/* not found */}
       <Route path="/404" component={ NotFound } />
@@ -27,6 +28,9 @@ export default () => {
       <Route path="/button" component={ LikeButton } />
       {/* like button */}
       <Route path="/page" component={ Page } />
+
+      {/* like comment */}
+      <Route path="/comment" component={ CommentArea } />
 
       {/* auth */}
       <Route path="/login" component={ Login } />
